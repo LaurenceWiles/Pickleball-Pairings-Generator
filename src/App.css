@@ -4,3 +4,32 @@
   padding: 2rem;
   text-align: center;
 }
+
+.player-input {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.player-input input {
+  padding: 8px;
+  flex: 1;
+}
+
+.player-input button {
+  padding: 8px 12px;
+}
+.player-input {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.player-input input {
+  padding: 8px;
+  flex: 1;
+}
+
+.player-input button {
+  padding: 8px 12px;
+}
