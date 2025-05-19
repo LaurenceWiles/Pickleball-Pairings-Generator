@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PlayerInput from "./components/PlayerInput";
+import PlayerList from "./components/PlayerList";
 import "./App.css";
 
 function App() {
@@ -9,16 +10,15 @@ function App() {
     setPlayers([...players, name]);
   };
 
+  const removePlayer = (indexToRemove) => {
+    setPlayers(players.filter((_, index) => index !== indexToRemove));
+  };
+
   return (
     <>
       <h1>Pickleball Pairings Generator</h1>
       <PlayerInput onAddPlayer={addPlayer} players={players} />
-
-      <ul>
-        {players.map((player, index) => (
-          <li key={index}>{player}</li>
-        ))}
-      </ul>
+      <PlayerList players={players} onRemovePlayer={removePlayer} />
     </>
   );
 }

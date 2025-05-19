@@ -39,3 +39,27 @@
   margin-top: 4px;
   font-size: 0.9rem;
 }
+
+.player-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.player-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #c00;
+}
+.remove-btn:hover {
+  color: #900;
+}
