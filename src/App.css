@@ -63,3 +63,9 @@
 .remove-btn:hover {
   color: #900;
 }
+
+.warning {
+  color: orange;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PlayerInput from "./components/PlayerInput";
 import PlayerList from "./components/PlayerList";
+import GenerateGamesButton from "./components/GenerateGamesButton";
 import "./App.css";
 
 function App() {
@@ -14,11 +15,17 @@ function App() {
     setPlayers(players.filter((_, index) => index !== indexToRemove));
   };
 
+  const generateGames = (players) => {
+    // Temporary placeholder
+    console.log("Generating games for:", players);
+  };
+
   return (
     <>
       <h1>Pickleball Pairings Generator</h1>
       <PlayerInput onAddPlayer={addPlayer} players={players} />
       <PlayerList players={players} onRemovePlayer={removePlayer} />
+      <GenerateGamesButton players={players} onGenerate={generateGames} />
     </>
   );
 }
