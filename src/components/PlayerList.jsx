@@ -1,4 +1,6 @@
 const PlayerList = ({ players, onRemovePlayer }) => {
+  if (players.length === 0) return <p>No players entered</p>;
+
   return (
     <div className="player-list">
       <h2>Players</h2>

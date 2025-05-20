@@ -2,10 +2,13 @@ import { useState } from "react";
 import PlayerInput from "./components/PlayerInput";
 import PlayerList from "./components/PlayerList";
 import GenerateGamesButton from "./components/GenerateGamesButton";
+import MatchDisplay from "./components/MatchDisplay";
+import generatePairings from "./utils/generatePairings";
 import "./App.css";
 
 function App() {
   const [players, setPlayers] = useState([]);
+  const [matches, setMatches] = useState([]);
 
   const addPlayer = (name) => {
     setPlayers([...players, name]);
@@ -16,8 +19,8 @@ function App() {
   };
 
   const generateGames = (players) => {
-    // Temporary placeholder
-    console.log("Generating games for:", players);
+    const games = generatePairings(players);
+    setMatches(games);
   };
 
   return (
@@ -26,6 +29,7 @@ function App() {
       <PlayerInput onAddPlayer={addPlayer} players={players} />
       <PlayerList players={players} onRemovePlayer={removePlayer} />
       <GenerateGamesButton players={players} onGenerate={generateGames} />
+      <MatchDisplay matches={matches} />
     </>
   );
 }
