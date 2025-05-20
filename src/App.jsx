@@ -18,7 +18,7 @@ function App() {
     setPlayers(players.filter((_, index) => index !== indexToRemove));
   };
 
-  const generateGames = (players) => {
+  const handleGenerateGames = (players) => {
     const games = generatePairings(players);
     setMatches(games);
   };
@@ -28,7 +28,7 @@ function App() {
       <h1>Pickleball Pairings Generator</h1>
       <PlayerInput onAddPlayer={addPlayer} players={players} />
       <PlayerList players={players} onRemovePlayer={removePlayer} />
-      <GenerateGamesButton players={players} onGenerate={generateGames} />
+      <GenerateGamesButton players={players} onGenerate={handleGenerateGames} />
       <MatchDisplay matches={matches} />
     </>
   );
