@@ -1,6 +1,6 @@
 const ClearGamesButton = ({ onClear }) => {
   return (
-    <button onClick={onClear} className="clear-matches-button">
+    <button onClick={onClear} className="clear-games-button">
       Clear Games
     </button>
   );

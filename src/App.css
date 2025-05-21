@@ -73,9 +73,8 @@
 }
 
 .warning {
-  color: orange;
   font-size: 0.9rem;
-  margin-top: 4px;
+  margin-top: 16px;
 }
 
 .generate-games-button {
@@ -120,12 +119,12 @@
 }
 
 .team-left {
-  text-align: right;
+  text-align: left;
   padding-right: 10px;
 }
 
 .team-right {
-  text-align: left;
+  text-align: right;
   padding-left: 10px;
 }
 
@@ -133,6 +132,21 @@
   color: #888;
   font-weight: bold;
   white-space: nowrap;
+}
+
+.clear-games-button {
+  background-color: #e53935;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.clear-games-button:hover {
+  background-color: #c62828;
 }
 
 @keyframes fadeout {
