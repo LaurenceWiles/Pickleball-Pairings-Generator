@@ -2,16 +2,19 @@ const GamesDisplay = ({ games }) => {
   if (games.length === 0) return null;
 
   return (
-    <div className="game-display">
+    <div className="games-display">
       <h2>Games</h2>
-      <ol>
+      <ul>
         {games.map((game, index) => (
-          <li key={index}>
-            <strong>{game.team1.join(" + ")}</strong> vs{" "}
-            <strong>{game.team2.join(" + ")}</strong>
+          <li key={index} className="game-item">
+            <strong className="team team-left">{game.team1.join(" + ")}</strong>
+            <span className="vs">vs</span>
+            <strong className="team team-right">
+              {game.team2.join(" + ")}
+            </strong>
           </li>
         ))}
-      </ol>
+      </ul>
     </div>
   );
 };

@@ -48,12 +48,6 @@
   background-color: #45a049;
 }
 
-.error {
-  color: red;
-  margin-top: 4px;
-  font-size: 0.9rem;
-}
-
 .player-list ul {
   list-style: none;
   padding: 2px;
@@ -84,6 +78,17 @@
   margin-top: 4px;
 }
 
+.generate-games-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
 .toast {
   position: fixed;
   top: 20px;
@@ -96,6 +101,38 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   z-index: 999;
   animation: fadeout 3s forwards;
+}
+
+.games-display ul {
+  list-style: none;
+  padding: 2px;
+}
+
+.game-item {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+  text-align: center;
+}
+
+.team-left {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.team-right {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.vs {
+  color: #888;
+  font-weight: bold;
+  white-space: nowrap;
 }
 
 @keyframes fadeout {
