@@ -8,8 +8,12 @@ const GenerateGamesButton = ({ players, onGenerate }) => {
   };
 
   return (
-    <div className="generate-button">
-      <button onClick={handleClick} disabled={!isValidCount}>
+    <>
+      <button
+        onClick={handleClick}
+        disabled={!isValidCount}
+        className="generate-games-button"
+      >
         Generate Games
       </button>
       {!isValidCount && (
@@ -17,7 +21,7 @@ const GenerateGamesButton = ({ players, onGenerate }) => {
           Please enter at least 4 players to generate games.
         </p>
       )}
-    </div>
+    </>
   );
 };
 

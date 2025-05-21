@@ -37,8 +37,11 @@ const PlayerInput = ({ onAddPlayer, players }) => {
           setName(e.target.value);
           if (error) setError("");
         }}
+        className="player-input-field"
       />
-      <button type="submit">Add Player</button>
+      <button type="submit" className="add-player-button">
+        Add Player
+      </button>
       {error && <div className="toast">{error}</div>}
     </form>
   );
