@@ -39,7 +39,7 @@ const PlayerInput = ({ onAddPlayer, players }) => {
         }}
       />
       <button type="submit">Add Player</button>
-      {error && <p className="error">{error}</p>}
+      {error && <div className="toast">{error}</div>}
     </form>
   );
 };
